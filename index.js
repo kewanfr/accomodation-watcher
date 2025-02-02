@@ -50,13 +50,7 @@ if (config.onProduction) {
 
 
 // Launch the browser and open a new blank page
-const browser = await puppeteer.launch(
-  {
-    headless: config.headless,
-    defaultViewport: null,
-    args: ['--start-maximized'],
-  }
-);
+const browser = await puppeteer.launch(browserParams);
 
 const client = new Client({
   intents: 3276799,
