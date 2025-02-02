@@ -1,0 +1,19 @@
+{
+  "name": "accomodation-watcher",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "git pull && npm install && pm2 restart CROUS && pm2 logs CROUS"
+  },
+  "type": "module",
+  "author": "kewanfr",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "discord.js": "^14.17.3",
+    "dotenv": "^16.4.7",
+    "nodemailer": "^6.10.0",
+    "puppeteer": "^24.1.1"
+  }
+}
