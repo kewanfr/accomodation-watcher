@@ -10,6 +10,7 @@ export default {
 
   headless: process.env.HEADLESS || true,
 
+  onProduction: process.env.NODE_ENV === 'production' || false,
 
   GMAIL: {
     USER: process.env.GMAIL_USER,

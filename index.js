@@ -32,6 +32,23 @@ function delay(time) {
   });
 }
 
+let browserParams = {}
+
+if (config.onProduction) {
+  browserParams = {
+    // headless: config.HEADLESS,
+    args: ["--no-sandbox"],
+    executablePath: "/usr/bin/chromium-browser",
+  }
+} else {
+  browserParams = {
+    headless: config.headless,
+    defaultViewport: null,
+    args: ['--start-maximized'],
+  }
+}
+
+
 // Launch the browser and open a new blank page
 const browser = await puppeteer.launch(
   {
